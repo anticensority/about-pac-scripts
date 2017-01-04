@@ -29,21 +29,22 @@ If web extension set PAC script via URL then the script is loaded only once and 
 
 After setting PAC URL in browser settings it is loaded only once or twice and cached for a long period. (checked on Firefox 50/Windows)
 
-## For Developers
+## Developing PAC Scripts
 
 1. PAC script is re-evaluated each time for each URL-resource loaded.
-2. IE may be detected via [Conditional Compilation](http://stackoverflow.com/questions/10072816/how-does-this-ie-check-work) of comment content: `const isIE = /*@cc_on!@*/false;`
+2. IE may be detected via [Conditional Compilation](http://stackoverflow.com/questions/10072816/how-does-this-ie-check-work) of comment content: `const isIE = /*@cc_on!@*/false;`.
+3. 'google.com.' with dot at the end is also a correct notation. I don't know any library that passes `host` this way, but I always defense myself with: `host.replace(/\.$/, '')`.
+
+### Alerts and Debugging
+
+1. Alert messages may be seen in Chromium network events: chrome://net-internals/#events
+2. In Chromium you may check active proxy settings via chrome://net-internals/#proxy
 
 ### Chromium Bugs
 
 1. Web Extensions can't set PAC scripts larger than 1MB via URL, [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=678022).
 2. Web Extensions can't set scripts with non-ASCII chars as a string, unicode URLs must be punycoded.
 3. Once I deleted all extensions from Chrome, but PAC script was still active and couldn't be purged via settings or browser restarts.
-
-### Alerts and Debugging
-
-1. Alert messages may be seen in Chromium network events: chrome://net-internals/#events
-2. In Chromium you may check active proxy settings via chrome://net-internals/#proxy
 
 ### Resources
 
