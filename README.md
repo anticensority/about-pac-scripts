@@ -1,6 +1,6 @@
 # About PAC Scripts
 
-## Setting PAC Script
+## Setting PAC Scripts
 
 ### Windows 
 
