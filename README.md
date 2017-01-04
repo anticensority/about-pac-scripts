@@ -15,7 +15,7 @@ On Windows you may set PAC script via `Win+R > inetcpl.cpl > Connections > LAN s
 
 `Browser > Options > Advanced > Network > Settings > Automatic proxy configuration URL`
 
-## Caching of PAC Scripts by Different OSes and Browsers
+## Caching of PAC Scripts
 
 ### Windows
 
@@ -32,11 +32,15 @@ After setting PAC URL in browser settings it is loaded only once or twice and ca
 ## For Developers
 
 1. PAC script is re-evaluated each time for each URL-resource loaded.
+2. IE may be detected via [Conditional Compilation](http://stackoverflow.com/questions/10072816/how-does-this-ie-check-work) of comment content: `const isIE = /*@cc_on!@*/false;`
 
 ### Chromium Bugs
 
-Web Extensions:
-
-1. Can't set PAC scripts larger than 1MB via URL, [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=678022).
-2. Can't set scripts with non-ASCII chars as a string, unicode URLs must be punycoded.
+1. Web Extensions can't set PAC scripts larger than 1MB via URL, [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=678022).
+2. Web Extensions can't set scripts with non-ASCII chars as a string, unicode URLs must be punycoded.
 3. Once I deleted all extensions from Chrome, but PAC script was still active and couldn't be purged via settings or browser restarts.
+
+## Alerts and Debugging
+
+1. Alert messages may be seen in Chromium network events: chrome://net-internals/#events
+2. In Chromium you may check active proxy settings via chrome://net-internals/#proxy
