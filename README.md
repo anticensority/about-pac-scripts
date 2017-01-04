@@ -40,7 +40,12 @@ After setting PAC URL in browser settings it is loaded only once or twice and ca
 2. Web Extensions can't set scripts with non-ASCII chars as a string, unicode URLs must be punycoded.
 3. Once I deleted all extensions from Chrome, but PAC script was still active and couldn't be purged via settings or browser restarts.
 
-## Alerts and Debugging
+### Alerts and Debugging
 
 1. Alert messages may be seen in Chromium network events: chrome://net-internals/#events
 2. In Chromium you may check active proxy settings via chrome://net-internals/#proxy
+
+### Resources
+
+1. http://findproxyforurl.com
+2. https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Necko/Proxy_Auto-Configuration_(PAC)_file
