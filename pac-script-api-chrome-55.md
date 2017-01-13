@@ -98,6 +98,32 @@ unescape: function unescape() { [native code] },
 }
 ```
 
+## Precautions / Quirks
+
+```js
+"use strict";
+var FOO = "foo";
+throw this.FOO;
+// Uncaught foo
+
+"use strict";
+let FOO = "foo";
+throw this.FOO;
+// Uncaught undefined
+
+"use strict";
+let FOO = "foo";
+this.BAR = FOO;
+throw this.BAR;
+// Uncaught foo
+
+"use strict";
+const FindProxyForURL = function(url, host) {
+  return "DIRECT";
+};
+// FindProxyForURL is undefined or not a function.
+```
+
 ## Implementations of Some PAC-specific Properties
 
 ```js
