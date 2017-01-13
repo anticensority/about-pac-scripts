@@ -6,7 +6,7 @@ I extracted properties of `this` and share it for your benefit.
 
 ## PAC-specific Properties (w/o Implementations)
 
-```
+```js
 this = {
 // Global properties specific for PAC script.
 
@@ -316,12 +316,12 @@ weekdayRange: function weekdayRange() {
 
 ## How to Get Similar Data
 
-1. In a Web Extension set error listener on PAC-script:
+A. In a Web Extension set error listener on PAC-script:
 ```js
 chrome.proxy.onProxyError.addListener((fault) => window.ERROR = fault.details);
 ```
 
-2. Inside PAC script execute the following code:
+B. Inside PAC script execute the following code:
 ```js
 var alt = {};
 
@@ -349,4 +349,4 @@ throw JSON.stringify(alt, function(key, value) {
     return value;
 });
 ```
-3. Examine `window.ERROR` inside devTools console of Web Extension's background page.
+C. Examine `window.ERROR` inside devTools console of Web Extension's background page.
