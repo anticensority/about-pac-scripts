@@ -32,7 +32,7 @@ After setting PAC URL in browser settings it is loaded only once or twice and ca
 ## Developing PAC Scripts
 
 1. PAC script is re-evaluated each time for each URL-resource loaded.
-2. There is no `window` or `global` global variable. There is `Math` however.
+2. There are no `window` or `global` global variables. There is `Math` however.
 2. IE may be detected via [Conditional Compilation](http://stackoverflow.com/questions/10072816/how-does-this-ie-check-work) of comment content: `const isIE = /*@cc_on!@*/false;`. I haven't tested this.
 3. 'google.com.' with dot at the end is also a correct notation. I don't know any library that passes `host` this way, but I always defense myself with: `host.replace(/\.?$/, '')`.
 
