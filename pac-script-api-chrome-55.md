@@ -10,7 +10,6 @@ Suffix `Ex` (e.g.`fooEx`) denotes functions w/ support of IPv6. More info: [msdn
 
 ```js
 this = {
-// Global properties specific for PAC script.
 
 convert_addr: function convert_addr(ipchars) {...},
 dateRange: function dateRange() {...},
