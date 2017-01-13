@@ -2,7 +2,7 @@
 
 In PAC script there is no `window` or `global`.  
 There is `this` which serves as global context.  
-I extracted properties of `this` and share it for your benefit.
+I extracted properties of `this` and share them here.
 
 ## PAC-specific Properties (w/o Implementations)
 
@@ -22,13 +22,13 @@ isPlainHostName: function isPlainHostName() {...},
 isResolvable: function isResolvable(host) {...},
 isResolvableEx: function isResolvableEx(host) {...},
 localHostOrDomainIs: function localHostOrDomainIs(host, hostdom) {...},
-months: Object,
+months: {JAN: 0, FEB: 1, MAR: 2, APR: 3, MAY: 4…},
 myIpAddress: function myIpAddress() {...},
 myIpAddressEx: function myIpAddressEx() {...},
 shExpMatch: function shExpMatch(url, pattern) {...},
 sortIpAddressList: function sortIpAddressList() {...},
 timeRange: function timeRange() {...},
-wdays: Object,
+wdays: {SUN: 0, MON: 1, TUE: 2, WED: 3, THU: 4…},
 weekdayRange: function weekdayRange() {...},
 
 };
