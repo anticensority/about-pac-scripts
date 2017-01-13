@@ -32,13 +32,15 @@ After setting PAC URL in browser settings it is loaded only once or twice and ca
 ## Developing PAC Scripts
 
 1. PAC script is re-evaluated each time for each URL-resource loaded.
-2. IE may be detected via [Conditional Compilation](http://stackoverflow.com/questions/10072816/how-does-this-ie-check-work) of comment content: `const isIE = /*@cc_on!@*/false;`.
+2. There is no `window` or `global` global variable. There is `Math` however.
+2. IE may be detected via [Conditional Compilation](http://stackoverflow.com/questions/10072816/how-does-this-ie-check-work) of comment content: `const isIE = /*@cc_on!@*/false;`. I haven't tested this.
 3. 'google.com.' with dot at the end is also a correct notation. I don't know any library that passes `host` this way, but I always defense myself with: `host.replace(/\.?$/, '')`.
 
 ### Alerts and Debugging
 
 1. Alert messages may be seen in Chromium network events: chrome://net-internals/#events
 2. In Chromium you may check active proxy settings via chrome://net-internals/#proxy
+3. In Chromium you may add PAC script's error listener via `chrome.proxy.onProxyError.addListener` and pass debug information in error.
 
 ### Chromium Bugs/Features
 
