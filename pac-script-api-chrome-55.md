@@ -12,7 +12,7 @@ Suffix `Ex` (e.g.`fooEx`) denotes functions w/ support of IPv6. More info: [msdn
 this = {
 
 convert_addr: function convert_addr(ipchars) {...},
-dateRange: function dateRange() {...},
+dateRange: function dateRange(...args) {...},
 dnsDomainIs: function dnsDomainIs(host, domain) {...},
 dnsDomainLevels: function dnsDomainLevels(host) {...},
 dnsResolve: function dnsResolve() {...},
@@ -28,9 +28,9 @@ myIpAddress: function myIpAddress() {...},
 myIpAddressEx: function myIpAddressEx() {...},
 shExpMatch: function shExpMatch(url, pattern) {...},
 sortIpAddressList: function sortIpAddressList() {...},
-timeRange: function timeRange() {...},
+timeRange: function timeRange(...args) {...},
 wdays: {SUN: 0, MON: 1, TUE: 2, WED: 3, THU: 4…},
-weekdayRange: function weekdayRange() {...},
+weekdayRange: function weekdayRange(...args) {...},
 
 };
 ```
