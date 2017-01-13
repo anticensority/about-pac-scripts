@@ -6,6 +6,8 @@ I extracted properties of `this` and share them here.
 
 ## PAC-specific Properties (w/o Implementations)
 
+Suffix `Ex` (e.g.`fooEx`) denotes functions w/ support of IPv6. More info: [msdn](https://msdn.microsoft.com/en-us/library/windows/desktop/gg308477(v=vs.85).aspx), [blogs.msdn](https://blogs.msdn.microsoft.com/wndp/2006/07/18/wininet-and-winhttp-ipv6-support-in-web-proxy-auto-discovery-wpad-scripts-enabled-in-windows-vista/).
+
 ```js
 this = {
 // Global properties specific for PAC script.
