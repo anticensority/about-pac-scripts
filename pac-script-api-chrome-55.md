@@ -343,6 +343,8 @@ weekdayRange: function weekdayRange() {
 
 ## How to Get Similar Data
 
+https://cs.chromium.org/chromium/src/net/proxy/proxy_resolver_script.h
+
 A. In a Web Extension set error listener on PAC-script:
 ```js
 chrome.proxy.onProxyError.addListener((fault) => window.ERROR = fault.details);
