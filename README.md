@@ -61,7 +61,8 @@ After setting PAC URL in browser settings it is loaded only once or twice and ca
 
 ### 3.3. Implementations and Sources
 
-Chromium: https://cs.chromium.org/chromium/src/net/proxy/proxy_resolver_script.h
+- Chromium: https://cs.chromium.org/chromium/src/net/proxy/proxy_resolver_script.h
+- FireFox: https://dxr.mozilla.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp
 
 ### 3.4. Resources
 
