@@ -1,13 +1,13 @@
 # About PAC Scripts
 
-1. Settign PAC Scripts
-1.1-3. Windows, Chromium, FireFox
-2. Caching of PAC Scripts
-2.1-3. Windows, Chromium, FireFox
-3. Developing PAC Scripts
-3.1. Alerts and Debugging
-3.2. Chromium Bugs/Features
-3.3. Implementations and Sources
+1. Settign PAC Scripts  
+1.1-3. Windows, Chromium, FireFox  
+2. Caching of PAC Scripts  
+2.1-3. Windows, Chromium, FireFox  
+3. Developing PAC Scripts  
+3.1. Alerts and Debugging  
+3.2. Chromium Bugs/Features  
+3.3. Implementations and Sources  
 3.4. Resources
 
 
