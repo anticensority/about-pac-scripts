@@ -1,6 +1,6 @@
 # About PAC Scripts
 
-1. Settign PAC Scripts  
+1. Setting PAC Scripts  
 1.1-3. Windows, Chromium, FireFox  
 2. Caching of PAC Scripts  
 2.1-3. Windows, Chromium, FireFox  
